@@ -26,7 +26,7 @@ function LoginSignUp() {
     setSuccess('');
 
     try {
-      const endpoint = isLogin ? '/api/auth/signup' : '/api/auth/signin';
+      const endpoint = isLogin ? '/api/auth/signin' : '/api/auth/signup';
       const payload = isLogin 
         ? { email: formData.email, password: formData.password }
         : formData;
