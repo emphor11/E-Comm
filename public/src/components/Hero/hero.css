@@ -1,0 +1,117 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f7f7f7; /* Light grey background for the hero section */
+    
+  }
+  
+  .hero-left {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .hero-left h2 {
+    font-size: 100px;
+    color: #000;
+    margin-bottom: 10px;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .hero-left div {
+    margin-bottom: 20px;
+  }
+  
+  .hero-left .hand-hand-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .hero-left .hand-hand-icon p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .hero-left .hand-hand-icon img {
+    height: 20px;
+  }
+  
+  .hero-left p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #555;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .hero-left .hero-latest-butt {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .hero-left .hero-latest-butt h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-right: 20px;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+  }
+  
+  .hero-left .hero-latest-butt img {
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .hero-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .hero-right img {
+    width: 77%; /* Adjust size to fit the design */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .hero-bottom-line {
+    position: absolute;
+    bottom: 0; /* Stick to the bottom of the hero section */
+    left: 0;
+    width: 100%; /* Full width */
+    height: 40px; /* Adjust the thickness of the line */
+    background-color: black; /* Black color for the bold line */
+  }
+
+
+  .diamond-star-container {
+    position: absolute;
+    top: 20%; /* Adjust position as needed */
+    right: 10%; /* Adjust position as needed */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between the stars */
+  }
+  
+.diamond-sta {
+    width: 40px;
+    height: 40px;
+    background-color: black; /* Adjust color to match the style */
+    transform: rotate(45deg);
+}
+
+   

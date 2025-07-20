@@ -1,0 +1,95 @@
+/* Base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .item img:hover {
+    transform: scale(1.05);
+  }
+  
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1F509A; /* Deep blue */
+    margin-top: 15px;
+  }
+  
+  .newPrice {
+    font-size: 20px;
+    color: #1E38E4; /* Vibrant blue */
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .oldPrice {
+    font-size: 16px;
+    color: #A0A398; /* Muted grayish-green */
+    text-decoration: line-through;
+    margin-top: 5px;
+  }
+  
+  .item .newPrice, .item .oldPrice {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .item:hover .newPrice {
+    color: #9E49E4; /* Rich purple */
+  }
+  
+  .item:hover .oldPrice {
+    color: #E0E0E0; /* Light gray */
+  }
+  
+  .item p, .item .newPrice, .item .oldPrice {
+    transition: color 0.3s ease;
+  }
+  
+  /* Link Styling */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Add subtle animation to the item */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .item {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
