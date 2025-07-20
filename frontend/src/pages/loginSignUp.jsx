@@ -31,7 +31,7 @@ function LoginSignUp() {
         ? { email: formData.email, password: formData.password }
         : formData;
 
-      const response = await fetch(`http://localhost:3001${endpoint}`, {
+      const response = await fetch(`https://e-comm-807k.onrender.com${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
