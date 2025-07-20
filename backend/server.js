@@ -10,7 +10,7 @@ const corsOptions = {
   origin: [
     'http://localhost:3000',  // React development server
     'http://localhost:3001',  // Alternative React port
-    'http://127.0.0.1:3000',  // Alternative localhost format
+    'https://e-comm-silk.vercel.app',  // Alternative localhost format
   ],
   credentials: true,  // Allow cookies and authentication headers
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
