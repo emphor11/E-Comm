@@ -1,117 +1,262 @@
+/* Hero Section - Clean & Classy Design */
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    background-color: #f7f7f7; /* Light grey background for the hero section */
-    
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 8%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Left section */
+.hero-left {
+  flex: 1;
+  max-width: 550px;
+  padding-right: 2rem;
+}
+
+.hero-left h2 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+}
+
+/* Hand icon section */
+.hand-hand-icon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+}
+
+.hand-hand-icon p {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0;
+  line-height: 1;
+}
+
+.hand-hand-icon img {
+  width: 45px;
+  height: auto;
+  animation: gentleWave 3s ease-in-out infinite;
+}
+
+@keyframes gentleWave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+/* Collection text */
+.hero-left > div p {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0.3rem 0;
+  line-height: 1;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-left > div p:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.hero-left > div p:last-child {
+  animation-delay: 0.8s;
+  color: #495057;
+}
+
+/* Latest collection button */
+.hero-latest-butt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  background: #212529;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 1s forwards;
+  text-decoration: none;
+}
+
+.hero-latest-butt:hover {
+  background: #495057;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(33, 37, 41, 0.15);
+}
+
+.hero-latest-butt h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.hero-latest-butt img {
+  width: 16px;
+  height: auto;
+  transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.hero-latest-butt:hover img {
+  transform: translateX(4px);
+}
+
+/* Right section */
+.hero-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-right > img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+/* Diamond stars container */
+.diamond-star-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.diamond-sta, .diamond-star1 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ffc107;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  opacity: 0.7;
+  animation: subtleFloat 4s ease-in-out infinite;
+}
+
+.diamond-sta {
+  top: 25%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.diamond-star1 {
+  top: 65%;
+  right: 20%;
+  animation-delay: 2s;
+  background: #17a2b8;
+}
+
+@keyframes subtleFloat {
+  0%, 100% { 
+    transform: rotate(45deg) translateY(0px);
+    opacity: 0.7;
+  }
+  50% { 
+    transform: rotate(45deg) translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* Bottom line */
+.hero-bottom-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #212529;
+  border-radius: 2px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+    min-height: auto;
   }
   
   .hero-left {
-    flex: 1;
-    padding-right: 20px;
+    margin-bottom: 3rem;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  
+  .hand-hand-icon p,
+  .hero-left > div p {
+    font-size: 2.5rem;
+  }
+  
+  .hero-latest-butt {
+    margin: 2rem auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2rem 5%;
+  }
+  
+  .hand-hand-icon p,
+  .hero-left > div p {
+    font-size: 2rem;
   }
   
   .hero-left h2 {
-    font-size: 100px;
-    color: #000;
-    margin-bottom: 10px;
-    font-family: "Pacifico", serif;
-    font-weight: 400;
-    font-style: normal;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
   }
   
-  .hero-left div {
-    margin-bottom: 20px;
+  .hero-latest-butt {
+    padding: 0.8rem 1.5rem;
   }
   
-  .hero-left .hand-hand-icon {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  .hero-latest-butt h1 {
+    font-size: 0.9rem;
   }
-  
-  .hero-left .hand-hand-icon p {
-    font-size: 16px;
-    font-weight: bold;
-    margin-right: 10px;
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-family: "Pacifico", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .hero-left .hand-hand-icon img {
-    height: 20px;
-  }
-  
-  .hero-left p {
-    font-size: 18px;
-    margin: 5px 0;
-    color: #555;
-    font-family: "Pacifico", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .hero-left .hero-latest-butt {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .hero-left .hero-latest-butt h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin-right: 20px;
-    font-family: "Pacifico", serif;
-    font-weight: 400;
-    font-style: normal;
-    
-  }
-  
-  .hero-left .hero-latest-butt img {
-    height: 30px;
-    cursor: pointer;
-  }
-  
-  .hero-right {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .hero-right img {
-    width: 77%; /* Adjust size to fit the design */
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  .hero-bottom-line {
-    position: absolute;
-    bottom: 0; /* Stick to the bottom of the hero section */
-    left: 0;
-    width: 100%; /* Full width */
-    height: 40px; /* Adjust the thickness of the line */
-    background-color: black; /* Black color for the bold line */
-  }
-
-
-  .diamond-star-container {
-    position: absolute;
-    top: 20%; /* Adjust position as needed */
-    right: 10%; /* Adjust position as needed */
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between the stars */
-  }
-  
-.diamond-sta {
-    width: 40px;
-    height: 40px;
-    background-color: black; /* Adjust color to match the style */
-    transform: rotate(45deg);
 }
-
-   
